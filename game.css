@@ -1,0 +1,73 @@
+*{
+	text-align:center;
+	box-sizing: border-box;
+}
+html{
+	width:414px;
+	height:667px;
+}
+body{
+	background: url("./background.jpeg");
+	background-size: 414px 667px;
+}
+h1{
+	font-size:1.5em;
+	background:transparent;
+	padding-top:10%;
+	line-height:30px;
+}
+h3{
+
+}
+span{
+	color:gold;
+	background:transparent;
+}
+body{
+	margin:10%;
+	line-height:1em;
+}
+header{
+	width:200px;
+	margin:auto;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  -webkit-animation-name: example; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:500px;}
+    25%  {background-color:yellow; left:0px; top:300px;}
+    50%  {background-color:red; left:0px; top:100px;}
+    75%  {background-color:yellow; left:0px; top:0px;}
+    100% {background-color:yellow; left:0px; top:-200px;}
+}
+#display{
+	width:300px;
+	height:300px;
+	position:relative;
+	font-size:25px;
+	line-height:20px;
+	margin:20px auto 40px auto;
+}
+div{
+	width:350px;
+	height:100px;
+	display:block;
+	position:relative;
+}
+	/*flex-wrap:wrap;
+	justify-content:center;
+	align-content:center;
+	/*margin:auto;*/
+
+button{
+	width:80px;
+	height:20px;
+	border:2px solid black;
+	border-radius:30%;
