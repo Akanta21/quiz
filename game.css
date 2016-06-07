@@ -20,7 +20,8 @@ main {
 #header{
 	background-color:red;
   color:black;
-	height:80px;
+	width:300px;
+	height:100px;
 	margin:auto;
 	font-size:25px;
 	line-height:1.5em;
@@ -49,9 +50,6 @@ section {
   background: black;
   color:gold;
 }
-#header{
-
-}
 span{
   color:gold;
 }
@@ -74,13 +72,15 @@ button{
   height:40px;
   border-radius:40%;
   font-size:20px;
+	background-color:black;
+	color:gold;
 }
 #footer{
   background:transparent;
 }
 #scores{
 	display:none;
-	height:50px;
+	height:100px;
 }
 #ready{
 	width:60px;
