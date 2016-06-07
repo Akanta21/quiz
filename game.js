@@ -5,6 +5,7 @@ $(function () {
     $('button').toggle()
     console.log('restart toggle')
     $('#ready').toggle()
+    $('#scores').toggle()
     $('#question').css('font-size', '40px')
     // update the display for the first time
     updateDisplay()
@@ -24,7 +25,7 @@ $(function () {
       console.log('iam a llama')
     }
     updateDisplay()
-    })
+  })
 })
     // var counter = 10
     //     // var interval = setInterval(function () {
@@ -55,12 +56,12 @@ var quiz = {
 }
 var randomTotal = 1
 
-var question1 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, generateRandom()], 2)
-var question2 = new Question(generateQn(), [generateRandom(), randomTotal, randomAnswer(), generateRandom()], 1)
-var question3 = new Question(generateQn(), [randomTotal, generateRandom(), randomAnswer(), generateRandom()], 0)
-var question4 = new Question(generateQn(), [randomTotal, randomAnswer(), generateRandom(), generateRandom()], 0)
-var question5 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, generateRandom()], 2)
-var question6 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, generateRandom()], 2)
+var question1 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, randomAnswerP()], 2)
+var question2 = new Question(generateQn(), [generateRandom(), randomTotal, randomAnswer(), randomAnswerP()], 1)
+var question3 = new Question(generateQn(), [randomTotal, generateRandom(), randomAnswer(), randomAnswerP()], 0)
+var question4 = new Question(generateQn(), [randomTotal, randomAnswer(), generateRandom(), randomAnswerP()], 0)
+var question5 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, randomAnswerP()], 2)
+var question6 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, randomAnswerP()], 2)
 
 function generateQn () {
   var randomMath1 = Math.floor(Math.random() * 100)
@@ -69,12 +70,15 @@ function generateQn () {
   return randomMath1 + ' X ' + randomMath2
 }
 function randomAnswer () {
-  return randomTotal - Math.floor(Math.random() * 10)
+  return randomTotal - 10
 }
 
 function generateRandom () {
-  var randomNum = Math.floor(Math.random() * 2000)
-  return randomNum
+  return randomTotal - 23
+}
+
+function randomAnswerP () {
+  return randomTotal + 30
 }
 
 // # numberOfQuestions()
@@ -170,6 +174,7 @@ function updateDisplay () {
       $('#question').text('The game is a draw. Neither player is a winner!')
       $('#question').css('padding','20px 0')
     } else {
+      $('#question').css('height','200px')
       $('#question').text('The winner is player ' + whoWon())
     }
   } else {

@@ -10,22 +10,20 @@ body{
 	background: url("./background.jpeg");
 	background-size: 414px 667px;
 	margin:10%;
-	line-height:1em;
+	line-height:1.2em;
 }
-h1{
-	font-size:1.5em;
-	background:transparent;
-	padding-top:10%;
-	line-height:30px;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-span{
-	color:gold;
-	background:transparent;
-}
-header{
-	width:200px;
+#header{
+	background-color:red;
+  color:black;
+	height:80px;
 	margin:auto;
-  height: 100px;
+	font-size:25px;
+	line-height:1.5em;
   background-color: red;
   position: relative;
   -webkit-animation-name: example; /* Chrome, Safari, Opera */
@@ -43,60 +41,60 @@ header{
     75%  {background-color:yellow; left:0px; top:200px;}
     100% {background-color:yellow; left:0px; top:0px;}
 }
-#display{
-	width:300px;
-	height:150px;
-	position:relative;
-	font-size:25px;
-	line-height:35px;
-	margin:40px auto 40px auto;
+section {
+  margin: 10px;
+  width: 200px;
+  height: 100px;
+  text-align:center;
+  background: black;
+  color:gold;
+}
+#header{
+
+}
+span{
+  color:gold;
 }
 #question{
-	padding:50px 0;
-	color:gold;
-	background:black;
+  width: 300px;
+  height: 100px;
+  line-height:100px;
+  font-size:20px;
 }
-footer{
-	width:350px;
-	height:100px;
-	display:block;
-	position:relative;
-	font-size:25px;
-	line-height:20px;
+#buttons{
+	margin:30px;
+  width:400px;
+  height:30px;
+  background-color:transparent;
+  display:flex;
+  justify-content:space-between;
 }
 button{
 	display:none;
-	background-color:black;
-	color:gold;
-	margin:10px;
-	width:60px;
-	height:35px;
-	border:2px solid black;
-	font-size:20px;
-	border-radius:30%;
+  height:40px;
+  border-radius:40%;
+  font-size:20px;
+}
+#footer{
+  background:transparent;
 }
 #scores{
-	margin:20px auto;
-	background-color:black;
-	color:gold;
-	width:200px;
+	display:none;
+	height:50px;
 }
-h3{
-	font-size:15px;
-}
-
 #ready{
 	width:60px;
 	height:20px;
 	border:2px solid black;
 	border-radius:30%;
 	background:yellow;
+  color:black;
 	margin:20px auto;
 }
 #restart{
 	width:60px;
 	height:20px;
-	border:1px solid black;
+	border:2px solid black;
 	border-radius:30%;
 	background:red;
 	color:black;
