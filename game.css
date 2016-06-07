@@ -9,6 +9,8 @@ html{
 body{
 	background: url("./background.jpeg");
 	background-size: 414px 667px;
+	margin:10%;
+	line-height:1em;
 }
 h1{
 	font-size:1.5em;
@@ -16,16 +18,9 @@ h1{
 	padding-top:10%;
 	line-height:30px;
 }
-h3{
-
-}
 span{
 	color:gold;
 	background:transparent;
-}
-body{
-	margin:10%;
-	line-height:1em;
 }
 header{
 	width:200px;
@@ -37,37 +32,64 @@ header{
   -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
   animation-name: example;
   animation-duration: 2s;
+	z-index:1;
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes example {
     0%   {background-color:red; left:0px; top:500px;}
-    25%  {background-color:yellow; left:0px; top:300px;}
-    50%  {background-color:red; left:0px; top:100px;}
-    75%  {background-color:yellow; left:0px; top:0px;}
-    100% {background-color:yellow; left:0px; top:-200px;}
+    25%  {background-color:yellow; left:0px; top:400px;}
+    50%  {background-color:red; left:0px; top:300px;}
+    75%  {background-color:yellow; left:0px; top:200px;}
+    100% {background-color:yellow; left:0px; top:0px;}
 }
 #display{
 	width:300px;
-	height:300px;
+	height:250px;
 	position:relative;
 	font-size:25px;
-	line-height:20px;
-	margin:20px auto 40px auto;
+	line-height:35px;
+	margin:40px auto 40px auto;
 }
-div{
+#question{
+	padding:100px 0;
+	color:gold;
+	background:black;
+}
+footer{
 	width:350px;
 	height:100px;
 	display:block;
 	position:relative;
+	cursor:cell;
+	font-size:20px;
+	line-height:20px;
 }
-	/*flex-wrap:wrap;
-	justify-content:center;
-	align-content:center;
-	/*margin:auto;*/
-
 button{
-	width:80px;
+	display:none;
+	margin:10px;
+	width:60px;
 	height:20px;
 	border:2px solid black;
 	border-radius:30%;
+}
+#scores{
+	margin-top:10px;
+}
+#ready{
+	width:60px;
+	height:20px;
+	border:2px solid black;
+	border-radius:30%;
+	background:yellow;
+	margin:auto;
+}
+#restart{
+	width:60px;
+	height:20px;
+	border:1px solid black;
+	border-radius:30%;
+	background:red;
+	color:black;
+	margin:auto;
+}
