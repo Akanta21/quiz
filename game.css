@@ -45,14 +45,14 @@ header{
 }
 #display{
 	width:300px;
-	height:250px;
+	height:150px;
 	position:relative;
 	font-size:25px;
 	line-height:35px;
 	margin:40px auto 40px auto;
 }
 #question{
-	padding:100px 0;
+	padding:50px 0;
 	color:gold;
 	background:black;
 }
@@ -61,28 +61,37 @@ footer{
 	height:100px;
 	display:block;
 	position:relative;
-	cursor:cell;
-	font-size:20px;
+	font-size:25px;
 	line-height:20px;
 }
 button{
 	display:none;
+	background-color:black;
+	color:gold;
 	margin:10px;
 	width:60px;
-	height:20px;
+	height:35px;
 	border:2px solid black;
+	font-size:20px;
 	border-radius:30%;
 }
 #scores{
-	margin-top:10px;
+	margin:20px auto;
+	background-color:black;
+	color:gold;
+	width:200px;
 }
+h3{
+	font-size:15px;
+}
+
 #ready{
 	width:60px;
 	height:20px;
 	border:2px solid black;
 	border-radius:30%;
 	background:yellow;
-	margin:auto;
+	margin:20px auto;
 }
 #restart{
 	width:60px;
@@ -91,5 +100,5 @@ button{
 	border-radius:30%;
 	background:red;
 	color:black;
-	margin:auto;
+	margin:20px auto;
 }

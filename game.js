@@ -55,18 +55,21 @@ var quiz = {
 }
 var randomTotal = 1
 
-var question1 = new Question(generateQn(), [generateRandom(), generateRandom(), randomTotal, generateRandom()], 2)
-var question2 = new Question(generateQn(), [generateRandom(), randomTotal, generateRandom(), generateRandom()], 1)
-var question3 = new Question(generateQn(), [randomTotal, generateRandom(), generateRandom(), generateRandom()], 0)
-var question4 = new Question(generateQn(), [randomTotal, generateRandom(), generateRandom(), generateRandom()], 0)
-var question5 = new Question(generateQn(), [generateRandom(), generateRandom(), randomTotal, generateRandom()], 2)
-var question6 = new Question(generateQn(), [generateRandom(), generateRandom(), randomTotal, generateRandom()], 2)
+var question1 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, generateRandom()], 2)
+var question2 = new Question(generateQn(), [generateRandom(), randomTotal, randomAnswer(), generateRandom()], 1)
+var question3 = new Question(generateQn(), [randomTotal, generateRandom(), randomAnswer(), generateRandom()], 0)
+var question4 = new Question(generateQn(), [randomTotal, randomAnswer(), generateRandom(), generateRandom()], 0)
+var question5 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, generateRandom()], 2)
+var question6 = new Question(generateQn(), [generateRandom(), randomAnswer(), randomTotal, generateRandom()], 2)
 
 function generateQn () {
   var randomMath1 = Math.floor(Math.random() * 100)
   var randomMath2 = Math.floor(Math.random() * 100)
   randomTotal = randomMath1 * randomMath2
   return randomMath1 + ' X ' + randomMath2
+}
+function randomAnswer () {
+  return randomTotal - Math.floor(Math.random() * 10)
 }
 
 function generateRandom () {
