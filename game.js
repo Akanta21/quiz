@@ -7,11 +7,17 @@ $(function () {
     $('#ready').toggle()
     $('#scores').toggle()
     $('#question').css('font-size', '40px')
+    $('h1').text('Player 1 turn')
+    $('h1').css('font-size', '1.3em')
+    $('#header').css('height', '1.5em')
+    $('#header').css('background-color', 'yellow')
     // update the display for the first time
     updateDisplay()
   })
   $('#restart').click(function () {
     restart()
+    $('button').toggle()
+    $('#scores').toggle()
   })
   $('button').click(function () {
       // if gameover then restart else log a player turn
@@ -22,7 +28,6 @@ $(function () {
     } else {
         // can use jquery index() to find the position of this element in relation to its siblings. works as only answers are in this container
       playTurn($(this).index())
-      console.log('iam a llama')
     }
     updateDisplay()
   })
@@ -115,18 +120,19 @@ function playTurn (choice) {
     return false
   } else {
     var playerAnswer = false
-    console.log('playerAnswer')
     if (choice === correctAnswer()) {
-      console.log('haha')
       playerAnswer = true
       if (currentQuestion() % 2) {
         quiz.player2Points++
-        console.log("Player 2 gets a point")
       } else {
         quiz.player1Points++
-        console.log('Player 1 gets a point')
       }
     } ++quiz.currentQuestion
+    if(currentQuestion() % 2) {
+      $('h1').text('Player 2 turn')
+    } else {
+      $('h1').text('Player 1 turn')
+    }
     if (currentQuestion() === numberOfQuestions()) {
       quiz.isGameOver = true
     }
@@ -171,10 +177,9 @@ function restart () {
 function updateDisplay () {
   if (isGameOver()) {
     if (whoWon() === 3) {
-      $('#question').text('The game is a draw. Neither player is a winner!')
-      $('#question').css('padding','20px 0')
+      $('#question').text("It's a draw!")
     } else {
-      $('#question').css('height','200px')
+      $('#question').css('height','100px')
       $('#question').text('The winner is player ' + whoWon())
     }
   } else {
