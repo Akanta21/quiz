@@ -8,8 +8,8 @@ $(function () {
     $('#scores').toggle()
     $('#question').css('font-size', '40px')
     $('h1').text('Player 1 turn')
-    $('h1').css('font-size', '1.3em')
-    $('#header').css('height', '1.5em')
+    $('h1').css('font-size', '1.2em')
+    $('#header').css('height', '3em')
     $('#header').css('background-color', 'yellow')
     // update the display for the first time
     updateDisplay()
@@ -180,6 +180,7 @@ function updateDisplay () {
       $('#question').text("It's a draw!")
     } else {
       $('#question').css('height','100px')
+      $('#question').css('font-size','25px')
       $('#question').text('The winner is player ' + whoWon())
     }
   } else {
